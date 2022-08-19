@@ -38,3 +38,24 @@ list.c:39:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 81a8a9f
+Fri 19 Aug 2022 12:41:17 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:37:3: error: unknown type name ‘x’
+   37 |   x* = list->head;
+      |   ^
+list.c:37:6: error: expected identifier or ‘(’ before ‘=’ token
+   37 |   x* = list->head;
+      |      ^
+list.c:38:10: error: ‘x’ undeclared (first use in this function)
+   38 |   return x;
+      |          ^
+list.c:38:10: note: each undeclared identifier is reported only once for each function it appears in
+list.c:39:1: error: control reaches end of non-void function [-Werror=return-type]
+   39 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+51608d2
