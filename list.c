@@ -35,11 +35,13 @@ List * createList() {
 
 void * firstList(List * list) {
   if (list == NULL) return NULL;
-  else{
+  if(list->current!=NULL){
 //    list->current->prev=list->current->next->prev;
 //    list->current->next=list->current->prev->next;
     list->current = list->head;
     return list->current;
+  }else{
+    return list->head;
   }
   
 }
