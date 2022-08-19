@@ -89,3 +89,22 @@ list.c:38:1: error: control reaches end of non-void function [-Werror=return-typ
 cc1: all warnings being treated as errors
 Compilation failed
 776df1e
+Fri 19 Aug 2022 12:48:42 PM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘firstList’:
+list.c:37:7: error: ‘list’ is a pointer; did you mean to use ‘->’?
+   37 |   list.current -> list.head;
+      |       ^
+      |       ->
+list.c:38:14: error: ‘list’ is a pointer; did you mean to use ‘->’?
+   38 |   return list.head;
+      |              ^
+      |              ->
+list.c:39:1: error: control reaches end of non-void function [-Werror=return-type]
+   39 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+c4ed15c
