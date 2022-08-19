@@ -39,9 +39,9 @@ void * firstList(List * list) {
 //    list->current->prev=list->current->next->prev;
 //    list->current->next=list->current->prev->next;
     list->current = list->head;
-    return list->current;
+    return list->current->data;
   }else{
-    return list->head;
+    return list->head->data;
   }
   
 }
