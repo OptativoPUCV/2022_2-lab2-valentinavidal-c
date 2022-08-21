@@ -111,9 +111,11 @@ void * popCurrent(List * list) {
   Node *current = list->current;
   if (current == NULL) return NULL;
   if (list->head == current){
+    return current;
     current->next->prev = NULL;
     list->head = current->next;
   }else{
+    return current;
     current->prev->next = list->current->next;
     current->next->prev = list->current->next;
   }
