@@ -202,3 +202,21 @@ list.c:116:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 9115680
+Sun 21 Aug 2022 04:34:21 PM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:74:3: error: expected expression before ‘}’ token
+   74 |   }
+      |   ^
+list.c:75:1: error: control reaches end of non-void function [-Werror=return-type]
+   75 | }
+      | ^
+list.c: In function ‘popCurrent’:
+list.c:116:1: error: control reaches end of non-void function [-Werror=return-type]
+  116 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+913a802
