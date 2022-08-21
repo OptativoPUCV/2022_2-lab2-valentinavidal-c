@@ -57,11 +57,21 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-    return NULL;
+  if(list==NULL) return NULL;
+  if(list->tail!=NULL){
+    return list->tail;
+    list->current->tail->data;
+  }else{
+    return list->current->data;
+  }
 }
 
 void * prevList(List * list) {
-    return NULL;
+  if(list==NULL) return NULL;
+  if(list->current!=NULL){
+    return list->current->prev->data;
+    list->current = list->current-
+  }
 }
 
 void pushFront(List * list, void * data) {
@@ -95,7 +105,14 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
-    return NULL;
+  Node *current = list->current;
+  if (current == NULL) return NULL;
+  if (list->head == current){
+    current->next->prev = NULL;
+    list->head = current->next;
+  }
+  current->prev->next = list->current->next;
+  current->next->prev = list->current->next;
 }
 
 void cleanList(List * list) {
