@@ -53,6 +53,7 @@ void * nextList(List * list) {
     list->current=list->current->next;
   }else{
     return list->current->data;
+    list->current=list->current->next;
   }
 }
 
