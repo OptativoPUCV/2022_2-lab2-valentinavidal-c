@@ -112,7 +112,7 @@ void pushCurrent(List * list, void * data) {
       list->current->next = newNode;
     }else{
       newNode->prev = list->tail;
-      list->tail->next = newNode;
+      list->current->next = newNode;
     }
   }
 }
