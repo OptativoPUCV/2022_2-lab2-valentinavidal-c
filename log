@@ -365,3 +365,9 @@ list.c:107:9: error: unused variable ‘newNode’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 a1eea61
+Mon 22 Aug 2022 01:35:57 AM UTC: 
+ list.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+ tests:  10|2
+total_score: 45/70
+06aab27
