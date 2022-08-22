@@ -577,3 +577,25 @@ list.c:154:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 9c4cb44
+Mon 22 Aug 2022 03:45:46 AM UTC: 
+ list.c | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:137:3: error: ‘else’ without a previous ‘if’
+  137 |   else{
+      |   ^~~~
+list.c:142:14: error: ‘newNode’ undeclared (first use in this function); did you mean ‘Node’?
+  142 |       return newNode->data;
+      |              ^~~~~~~
+      |              Node
+list.c:142:14: note: each undeclared identifier is reported only once for each function it appears in
+list.c:135:9: error: unused variable ‘current’ [-Werror=unused-variable]
+  135 |   void *current = list->current->data;
+      |         ^~~~~~~
+list.c:154:1: error: control reaches end of non-void function [-Werror=return-type]
+  154 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+6bb8589
