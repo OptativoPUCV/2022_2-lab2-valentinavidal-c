@@ -139,16 +139,16 @@ void * popCurrent(List * list) {
     if (list->head == current){
       current = current->next;
       current = list->head;
-      current = NULL;
+      Free(current);
       return newNode->data;
     }else if(current==list->tail){
       current->prev = list->tail;
-      current = NULL;
+      Free(current);
       return newNode->data;
     }else{
       current->prev->next = list->current->next;
       current->next->prev = list->current->next;
-      current = NULL;
+      Free(current);
       return newNode->data;
     }
   }

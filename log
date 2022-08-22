@@ -460,3 +460,15 @@ Mon 22 Aug 2022 03:11:00 AM UTC:
  tests:  11|1
 total_score: 55/70
 c4e6467
+Mon 22 Aug 2022 03:16:05 AM UTC: 
+ list.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:142:7: error: implicit declaration of function ‘Free’; did you mean ‘free’? [-Werror=implicit-function-declaration]
+  142 |       Free(current);
+      |       ^~~~
+      |       free
+cc1: all warnings being treated as errors
+Compilation failed
+f61e99b
