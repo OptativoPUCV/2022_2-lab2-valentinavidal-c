@@ -621,3 +621,25 @@ list.c:137:3: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 94e0f5e
+Mon 22 Aug 2022 03:46:45 AM UTC: 
+ list.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:135:11: error: unused variable ‘data’ [-Werror=unused-variable]
+  135 |     void *data = list->current->data;
+      |           ^~~~
+list.c: At top level:
+list.c:137:4: error: expected identifier or ‘(’ before ‘else’
+  137 |   }else{
+      |    ^~~~
+list.c:154:1: error: expected identifier or ‘(’ before ‘}’ token
+  154 | }
+      | ^
+list.c: In function ‘popCurrent’:
+list.c:137:3: error: control reaches end of non-void function [-Werror=return-type]
+  137 |   }else{
+      |   ^
+cc1: all warnings being treated as errors
+Compilation failed
+2629f3b
