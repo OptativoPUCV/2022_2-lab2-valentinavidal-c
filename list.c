@@ -133,7 +133,6 @@ void * popBack(List * list) {
 void * popCurrent(List * list) {
   if (list == NULL) return NULL;
     void *data = list->current->data;
-//  Node *newNode = createNode(current->data);
   if (list->head == list->current){
     list->current=list->current->next;
     list->head = list->current;
@@ -141,8 +140,10 @@ void * popCurrent(List * list) {
     free(list->head->prev);
     return data;
   }else if(list->current==list->tail){
-    list->current->prev = list->tail;
-    free(list->current);
+    list->current = list->current->prev;
+    list->current = list->tail;
+    free(list->current->next);
+    list->current->next = NULL;
     return data;
   }else{
     list->current->prev->next = list->current->next;
