@@ -534,3 +534,46 @@ list.c:154:1: error: control reaches end of non-void function [-Werror=return-ty
 cc1: all warnings being treated as errors
 Compilation failed
 6f4ca41
+Mon 22 Aug 2022 03:44:12 AM UTC: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:137:3: error: ‘else’ without a previous ‘if’
+  137 |   else{
+      |   ^~~~
+list.c:139:22: error: dereferencing ‘void *’ pointer [-Werror]
+  139 |       current=current->next;
+      |                      ^~
+list.c:139:22: error: request for member ‘next’ in something not a structure or union
+list.c:142:14: error: ‘newNode’ undeclared (first use in this function); did you mean ‘Node’?
+  142 |       return newNode->data;
+      |              ^~~~~~~
+      |              Node
+list.c:142:14: note: each undeclared identifier is reported only once for each function it appears in
+list.c:144:14: error: dereferencing ‘void *’ pointer [-Werror]
+  144 |       current->prev = list->tail;
+      |              ^~
+list.c:144:14: error: request for member ‘prev’ in something not a structure or union
+list.c:148:14: error: dereferencing ‘void *’ pointer [-Werror]
+  148 |       current->prev->next = current->next;
+      |              ^~
+list.c:148:14: error: request for member ‘prev’ in something not a structure or union
+list.c:148:36: error: dereferencing ‘void *’ pointer [-Werror]
+  148 |       current->prev->next = current->next;
+      |                                    ^~
+list.c:148:36: error: request for member ‘next’ in something not a structure or union
+list.c:149:14: error: dereferencing ‘void *’ pointer [-Werror]
+  149 |       current->next->prev = current->next;
+      |              ^~
+list.c:149:14: error: request for member ‘next’ in something not a structure or union
+list.c:149:36: error: dereferencing ‘void *’ pointer [-Werror]
+  149 |       current->next->prev = current->next;
+      |                                    ^~
+list.c:149:36: error: request for member ‘next’ in something not a structure or union
+list.c:154:1: error: control reaches end of non-void function [-Werror=return-type]
+  154 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+9c4cb44
